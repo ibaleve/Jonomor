@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Make Money Taking Pics With Your Phone</title>
-	<link rel="stylesheet" type="text/css" href="css">
+	<link rel="stylesheet" type="text/css" href=".css">
 </head>
 <body>
 	<header>
