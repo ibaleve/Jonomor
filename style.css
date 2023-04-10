@@ -1,0 +1,153 @@
+/* CSS */
+
+/* Global styles */
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+}
+
+header {
+	background-color: #3B3B3B;
+	color: #FFFFFF;
+	padding: 10px;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+nav a {
+	color: #FFFFFF;
+	font-weight: bold;
+	margin: 0 10px;
+	text-decoration: none;
+}
+
+main {
+	padding: 50px 10%;
+}
+
+h1 {
+	font-size: 4rem;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+h2 {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+
+p {
+	line-height: 1.5;
+	margin-bottom: 2rem;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	margin-bottom: 1rem;
+}
+
+blockquote {
+	background-color: #F5F5F5;
+	border-left: 10px solid #3B3B3B;
+	padding: 1rem;
+	margin-bottom: 2rem;
+}
+
+cite {
+	font-style: italic;
+}
+
+form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+	border: none;
+	border-bottom: 2px solid #3B3B3B;
+	font-size: 1rem;
+	margin-bottom: 2rem;
+	padding: 0.5rem;
+	width: 100%;
+}
+
+input[type="submit"] {
+	background-color: #3B3B3B;
+	border: none;
+	color: #FFFFFF;
+	cursor: pointer;
+	font-size: 1rem;
+	margin-top: 2rem;
+	padding: 0.5rem 1rem;
+	transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+	background-color: #4D4D4D;
+}
+
+.cta-btn {
+	background-color: #F49E4C;
+	border: none;
+	color: #FFFFFF;
+    cursor: pointer;
+	display: inline-block;
+	font-size: 1.2rem;
+	margin-top: 2rem;
+	padding: 1rem 2rem;
+	text-align: center;
+	text-decoration: none;
+	transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+	background-color: #F8B263;
+}
+
+footer {
+	background-color: #F5F5F5;
+	border-top: 1px solid #CCCCCC;
+	padding: 1rem;
+	text-align: center;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+	header {
+		padding: 10px 5%;
+	}
+
+	main {
+		padding: 50px 5%;
+	}
+}
