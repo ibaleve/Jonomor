@@ -1,58 +1,12 @@
-/* CSS */
-
-/* Global styles */
-* {
-	box-sizing: border-box;
-}
-
-html {
-	font-size: 16px;
-}
-
 body {
-	margin: 0;
 	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
-header {
-	background-color: #3B3B3B;
-	color: #FFFFFF;
-	padding: 10px;
-	position: sticky;
-	top: 0;
-	z-index: 1;
-}
-
-nav {
-	display: flex;
-	justify-content: space-between;
-}
-
-nav a {
-	color: #FFFFFF;
-	font-weight: bold;
-	margin: 0 10px;
+a {
+	color: #333;
 	text-decoration: none;
-}
-
-main {
-	padding: 50px 10%;
-}
-
-h1 {
-	font-size: 4rem;
-	margin-bottom: 2rem;
-	text-align: center;
-}
-
-h2 {
-	font-size: 2rem;
-	margin-bottom: 1rem;
-}
-
-p {
-	line-height: 1.5;
-	margin-bottom: 2rem;
 }
 
 ul {
@@ -61,93 +15,146 @@ ul {
 	padding: 0;
 }
 
-li {
-	margin-bottom: 1rem;
+/* Header styles */
+header {
+	background-color: #f9f9f9;
+	padding: 20px;
+	text-align: center;
 }
 
-blockquote {
-	background-color: #F5F5F5;
-	border-left: 10px solid #3B3B3B;
-	padding: 1rem;
-	margin-bottom: 2rem;
+header h1 {
+	font-size: 36px;
+	margin: 0;
 }
 
-cite {
-	font-style: italic;
+nav {
+	margin: 20px 0;
 }
 
-form {
+nav ul {
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: center;
-	max-width: 600px;
-	margin: 0 auto;
 }
 
-label {
-	display: block;
+nav li {
+	margin: 0 10px;
+}
+
+nav li a {
+	font-size: 20px;
 	font-weight: bold;
-	margin-bottom: 0.5rem;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-	border: none;
-	border-bottom: 2px solid #3B3B3B;
-	font-size: 1rem;
-	margin-bottom: 2rem;
-	padding: 0.5rem;
-	width: 100%;
-}
-
-input[type="submit"] {
-	background-color: #3B3B3B;
-	border: none;
-	color: #FFFFFF;
-	cursor: pointer;
-	font-size: 1rem;
-	margin-top: 2rem;
-	padding: 0.5rem 1rem;
-	transition: background-color 0.3s ease;
-}
-
-input[type="submit"]:hover {
-	background-color: #4D4D4D;
 }
 
 .cta-btn {
-	background-color: #F49E4C;
-	border: none;
-	color: #FFFFFF;
-    cursor: pointer;
+	background-color: #d9534f;
+	border-radius: 4px;
+	color: #fff;
 	display: inline-block;
-	font-size: 1.2rem;
-	margin-top: 2rem;
-	padding: 1rem 2rem;
-	text-align: center;
+	font-size: 20px;
+	margin-top: 20px;
+	padding: 10px 20px;
 	text-decoration: none;
-	transition: background-color 0.3s ease;
 }
 
 .cta-btn:hover {
-	background-color: #F8B263;
+	background-color: #c9302c;
+	cursor: pointer;
 }
 
-footer {
-	background-color: #F5F5F5;
-	border-top: 1px solid #CCCCCC;
-	padding: 1rem;
+/* Main styles */
+main {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+section {
+	margin: 50px 0;
+}
+
+section h2 {
+	font-size: 28px;
+	margin-bottom: 20px;
+}
+
+section ul, section dl {
+	font-size: 20px;
+	margin-left: 40px;
+}
+
+section li {
+	margin-bottom: 10px;
+}
+
+blockquote {
+	font-size: 24px;
+	font-style: italic;
+	margin-bottom: 20px;
+	padding-left: 40px;
+	position: relative;
+}
+
+blockquote:before {
+	content: "\201C";
+	font-size: 60px;
+	font-weight: bold;
+	left: -20px;
+	position: absolute;
+	top: -20px;
+}
+
+blockquote:after {
+	content: "\201D";
+	font-size: 60px;
+	font-weight: bold;
+	position: absolute;
+	right: -20px;
+	bottom: -20px;
+}
+
+blockquote footer {
+	font-size: 20px;
+	font-style: normal;
+	margin-top: 10px;
+	text-align: right;
+}
+
+/* Form styles */
+form {
+	display: flex;
+	flex-direction: column;
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+form div {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+
+label {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+input[type="text"] {
+	font-size: 20px;
+	padding: 10px;
+}
+
+input[type="submit"] {
+	background-color: #d9534f;
+	border: none;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 20px;
+	padding: 10px 20px;
 	text-align: center;
+	text-decoration: none;
 }
 
-/* Media queries */
-@media screen and (max-width: 768px) {
-	header {
-		padding: 10px 5%;
-	}
-
-	main {
-		padding: 50px 5%;
-	}
+input[type="submit"]:hover {
+	background-color: #c9302c;
+	cursor: pointer;
 }
