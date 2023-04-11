@@ -1,5 +1,3 @@
-// JavaScript
-
 // Smooth scrolling for anchor links
 const smoothScroll = function(target, duration) {
 	const targetElement = document.querySelector(target);
@@ -34,24 +32,35 @@ const smoothScroll = function(target, duration) {
 	requestAnimationFrame(animation);
 };
 
-const navLinks = document.querySelectorAll('nav a');
-navLinks.forEach(function(link) {
-	link.addEventListener('click', function(e) {
-		e.preventDefault();
-		const target = link.getAttribute('href');
-		const duration = 1000;
-		smoothScroll(target, duration);
+// Smooth scrolling for banner CTA button
+const bannerButton = document.querySelector('#banner .cta-btn');
+bannerButton.addEventListener('click', function(e) {
+	e.preventDefault();
+	const target = bannerButton.getAttribute('href');
+	const duration = 1000;
+	smoothScroll(target, duration);
+});
+
+// Enlarge photo boxes on hover
+const photoBoxes = document.querySelectorAll('.photo-box');
+photoBoxes.forEach(function(box) {
+	box.addEventListener('mouseover', function() {
+		box.querySelector('img').style.transform = 'scale(1.1)';
+	});
+	box.addEventListener('mouseout', function() {
+		box.querySelector('img').style.transform = 'scale(1)';
 	});
 });
 
+// When the user submits the sign-up form, display a confirmation message
 const signUpForm = document.querySelector('#signup form');
 const nameInput = document.querySelector('#name');
 const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('#password');
 const confirmPasswordInput = document.querySelector('#confirm-password');
-const ctaButton = document.querySelector('.cta-btn');
+const signUpButton = document.querySelector('#signup .cta-btn');
 
-ctaButton.addEventListener('click', function(e) {
+signUpButton.addEventListener('click', function(e) {
 	e.preventDefault();
 	signUpForm.submit();
 });
@@ -96,6 +105,6 @@ signUpForm.addEventListener('submit', function(e) {
 	}
 
 	// Submit form
-	alert('Thank you for signing up!');
+	alert(`Thank you, ${nameValue}! Your account has been created. Please check your email for further instructions.`);
 	signUpForm.reset();
 });
